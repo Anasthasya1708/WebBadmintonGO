@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BadmintonGO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="side-logo">
+                Badminton<span>GO</span>
+            </div>
+            <nav class="side-menu">
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="#lapangan">Lapangan</a>
+                <a href="#booking">Booking</a>
+                <a href="index.html">Website</a>
+            </nav>
+            <a href="login.html" class="logout">Logout</a>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="dashboard-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Selamat datang di halaman dashboard BadmintonGO.</p>
+                </div>
+                <div class="admin-name">Admin • Sausan</div>
+            </div>
+
+            <section class="statistics">
+                <div class="stat-card">
+                    <p>Total Lapangan</p>
+                    <h2>12</h2>
+                    <span>+2 bulan ini</span>
+                </div>
+                <div class="stat-card">
+                    <p>Total Booking</p>
+                    <h2>48</h2>
+                    <span>+8 minggu ini</span>
+                </div>
+                <div class="stat-card">
+                    <p>Booking Hari Ini</p>
+                    <h2>8</h2>
+                    <span>Aktif</span>
+                </div>
+                <div class="stat-card">
+                    <p>Pendapatan</p>
+                    <h2>Rp3,6jt</h2>
+                    <span>Bulan ini</span>
+                </div>
+            </section>
+
+            <section class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="card-header-dashboard">
+                        <h3>Statistik Booking</h3>
+                        <a href="#booking">Lihat data</a>
+                    </div>
+                    <div class="chart">
+                        <div class="bar"><span>Sen</span></div>
+                        <div class="bar"><span>Sel</span></div>
+                        <div class="bar"><span>Rab</span></div>
+                        <div class="bar"><span>Kam</span></div>
+                        <div class="bar"><span>Jum</span></div>
+                        <div class="bar"><span>Sab</span></div>
+                        <div class="bar"><span>Min</span></div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="card-header-dashboard">
+                        <h3>Aktivitas Terbaru</h3>
+                    </div>
+                    <div class="activity">
+                        <div class="activity-item">
+                            <div class="activity-icon">✓</div>
+                            <div>
+                                <strong>Booking baru</strong>
+                                <small>Sausan • Arena Sport</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">+</div>
+                            <div>
+                                <strong>Lapangan ditambahkan</strong>
+                                <small>GOR Citra Kaleng</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">✓</div>
+                            <div>
+                                <strong>Booking selesai</strong>
+                                <small>Raka • Gedung Olahraga</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-card table-card" id="lapangan">
+                <div class="card-header-dashboard">
+                    <h3>Data Lapangan</h3>
+                    <button class="add-button">+ Tambah</button>
+                </div>
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Lapangan</th>
+                            <th>Harga/Jam</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Gedung Olahraga</td>
+                            <td>Rp75.000</td>
+                            <td><span class="status">Tersedia</span></td>
+                            <td>
+                                <button class="action-button">Edit</button>
+                                <button class="action-button">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>GOR Citra Kaleng</td>
+                            <td>Rp75.000</td>
+                            <td><span class="status">Tersedia</span></td>
+                            <td>
+                                <button class="action-button">Edit</button>
+                                <button class="action-button">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Arena Sport</td>
+                            <td>Rp75.000</td>
+                            <td><span class="status">Tersedia</span></td>
+                            <td>
+                                <button class="action-button">Edit</button>
+                                <button class="action-button">Hapus</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="dashboard-card table-card" id="booking">
+                <div class="card-header-dashboard">
+                    <h3>Data Booking Terbaru</h3>
+                    <button class="add-button">+ Tambah</button>
+                </div>
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Pelanggan</th>
+                            <th>Lapangan</th>
+                            <th>Tanggal</th>
+                            <th>Jam</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Sausan</td>
+                            <td>Arena Sport</td>
+                            <td>03/10/2026</td>
+                            <td>19.00</td>
+                            <td><span class="status">Aktif</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Raka</td>
+                            <td>GOR Citra Kaleng</td>
+                            <td>03/10/2026</td>
+                            <td>20.00</td>
+                            <td><span class="status">Aktif</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Dina</td>
+                            <td>Gedung Olahraga</td>
+                            <td>04/10/2026</td>
+                            <td>18.00</td>
+                            <td><span class="status">Aktif</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

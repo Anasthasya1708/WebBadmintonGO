@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Register - BadmintonGO</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling Toast / Snackbar */
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 14px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @keyframes fadein {
+            from { bottom: 0; opacity: 0; }
+            to { bottom: 30px; opacity: 1; }
+        }
+        @keyframes fadeout {
+            from { bottom: 30px; opacity: 1; }
+            to { bottom: 0; opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+<main class="auth">
+    <div class="auth-box">
+        <div class="form">
+            <div class="brand">BadmintonGO</div>
+            <h2>Register</h2>
+            <p>Buat akun baru untuk menggunakan layanan.</p>
+            <form id="registerForm">
+                <div class="field"><label>Nama</label><input type="text" placeholder="Nama lengkap" required></div>
+                <div class="field"><label>Email</label><input type="email" placeholder="Email" required></div>
+                <div class="field"><label>Username</label><input type="text" placeholder="Username" required></div>
+                <div class="field"><label>Password</label><input type="password" placeholder="Password" required></div>
+                <button type="submit" class="submit">DAFTAR</button>
+            </form>
+            <p class="switch">Sudah punya akun? <a href="login.html">Login</a></p>
+            <p class="switch"><a href="index.html">← Kembali</a></p>
+        </div>
+        <div class="auth-image">
+            <strong>BadmintonGO</strong>
+            <h1>Mulai sekarang.</h1>
+            <p>Daftar dan gunakan informasi lapangan badminton dengan mudah.</p>
+        </div>
+    </div>
+</main>
+
+<!-- Elemen Toast Notification -->
+<div id="toast">Registrasi Berhasil! Silakan Login.</div>
+
+<script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Mencegah reload form bawaan HTML
+        
+        // Tampilkan Toast
+        const toast = document.getElementById('toast');
+        toast.className = "show";
+        
+        // Simulasi pindah halaman setelah toast selesai (3 detik)
+        setTimeout(function() {
+            toast.className = toast.className.replace("show", "");
+            window.location.href = "login.html";
+        }, 3000);
+    });
+</script>
+</body>
+</html>
